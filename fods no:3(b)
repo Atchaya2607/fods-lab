@@ -1,0 +1,25 @@
+import statistics
+
+def main():
+    # Sample data
+    numbers = [10, 20, 30, 40, 50, 20]
+
+    # Calculate averages
+    mean_value = sum(numbers) / len(numbers)
+    median_value = statistics.median(numbers)
+    mode_value = statistics.mode(numbers)
+
+    # Print results
+    print("Numbers:", numbers)
+    print("Mean:", mean_value)
+    print("Median:", median_value)
+    print("Mode:", mode_value)
+
+if __name__ == "__main__":
+    main()
+
+output:
+Numbers: [10, 20, 30, 40, 50, 20]
+Mean: 28.333333333333332
+Median: 25.0
+Mode: 20
