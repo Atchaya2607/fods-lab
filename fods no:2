@@ -1,0 +1,20 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+def main():
+    # Sample data
+    x = np.arange(1, 11)
+    y = x ** 2
+
+    # 1️⃣ Line Plot
+    plt.figure()
+    plt.plot(x, y, marker='o')
+    plt.title("Line Plot Example")
+    plt.xlabel("X values")
+    plt.ylabel("Y values (x^2)")
+    plt.grid(True)
+    plt.show()
+
+    # 2️⃣ Bar Chart
+    categories = ['A', 'B', 'C', 'D']
+    v
