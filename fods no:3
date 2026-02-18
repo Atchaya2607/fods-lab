@@ -1,0 +1,32 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+def main():
+    # Sample data
+    data = np.random.normal(loc=50, scale=10, size=100)
+
+    # Create frequency distribution (histogram)
+    plt.hist(data, bins=10, edgecolor='black')
+
+    plt.title("Frequency Distribution")
+    plt.xlabel("Value")
+    plt.ylabel("Frequency")
+    plt.grid(axis='y', linestyle='--', alpha=0.7)
+
+    plt.show()
+
+if __name__ == "__main__":
+    main()
+output:  
+Frequency Table:
+40    1
+45    2
+50    2
+60    1
+67    1
+72    1
+75    1
+80    1
+85    1
+90    1
+Name: marks, dtype: int64
