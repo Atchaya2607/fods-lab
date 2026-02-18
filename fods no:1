@@ -1,0 +1,36 @@
+import pandas as pd
+
+def main():
+    # 1. Load CSV into DataFrame
+    df = pd.read_csv("sales.csv")
+
+    print("Original Data:")
+    print(df.head())
+
+    # 2. Basic Cleaning
+    df.dropna(inplace=True)  # remove missing values
+    df["date"] = pd.to_datetime(df["date"])
+
+    # 3. Create new column (Total Sales)
+    df["total"] = df["quantity"] * df["price"]
+
+    # 4. Filter: Only Electronics category
+    electronics = df[df["category"] == "Electronics"]
+
+    # 5. Group by product and calculate total revenue
+    summary = (
+        electronics
+        .groupby("product")["total"]
+        .sum()
+        .reset_index()
+        .sort_values(by="total", ascending=False)
+    )
+
+    print("\nElectronics Revenue Summary:")
+    print(summary)
+
+    # 6. Save result
+    summary.to_csv("electronics_summary.csv", index=False)
+
+if __name__ == "__main__":
+    main()
