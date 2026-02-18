@@ -1,0 +1,26 @@
+import statistics
+
+def main():
+    # Sample data
+    numbers = [10, 20, 30, 40, 50, 20]
+
+    # Range
+    data_range = max(numbers) - min(numbers)
+
+    # Variance (sample variance)
+    variance_value = statistics.variance(numbers)
+
+    # Standard Deviation (sample standard deviation)
+    std_deviation = statistics.stdev(numbers)
+
+    # Print results
+    print("Numbers:", numbers)
+    print("Range:", data_range)
+    print("Variance:", variance_value)
+    print("Standard Deviation:", std
+
+output:
+Numbers: [10, 20, 30, 40, 50, 20]
+Range: 40
+Variance: 216.66666666666666
+Standard Deviation: 14.719601443879744
